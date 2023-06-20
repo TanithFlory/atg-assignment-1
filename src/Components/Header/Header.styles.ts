@@ -1,11 +1,11 @@
 import styled from "styled-components";
 const SHeader = styled.header`
   position: relative;
-  max-height: 440px;
+  height: 440px;
   img {
     width: 100%;
     height: 100%;
-    min-height: 440px;
+    object-fit: cover;
   }
   & > div {
     z-index: 1;
