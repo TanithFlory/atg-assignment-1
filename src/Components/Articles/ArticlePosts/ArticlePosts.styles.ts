@@ -22,6 +22,9 @@ export const SArticleCard = styled.div`
     p {
       margin: 0;
     }
+    h2 {
+      text-wrap: balance;
+    }
     & > span:first-child {
       font-size: 18px;
       font-weight: 600;
@@ -39,36 +42,43 @@ export const SArticleCard = styled.div`
   .article-title {
     display: flex;
     align-items: flex-start;
-  }
-  .user-details {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+  }
+  .location-details {
+    display: flex;
+    gap: 3rem;
     & > div {
       display: flex;
       align-items: center;
+      gap: 5px;
     }
-    & > div:first-child {
-      gap: 1rem;
-    }
-    & > div:nth-child(2) {
-      gap: 40px;
-      div:first-child {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-    }
-    .share-button {
-      background: #edeef0;
-      border-radius: 2px;
-      padding: 9px 14px;
+    span {
+      font-size: 15px;
+      font-weight: 500;
     }
   }
-  .three-dots {
-    padding-top: 12px;
-  }
+
   .clickable {
     cursor: pointer;
+  }
+  .visit-website,
+  .apply-on {
+    width: 100%;
+    max-width: 650px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 600;
+    border: 0.7px solid #a9aeb8;
+    border-radius: 10px;
+  }
+  .visit-website {
+    color: #e56135;
+  }
+  .apply-on {
+    color: #02b875;
   }
 `;
