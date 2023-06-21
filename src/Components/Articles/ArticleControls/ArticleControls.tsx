@@ -5,7 +5,8 @@ const ArticleControls = () => {
     <SArticleControls>
       <div>
         <ul>
-          <li>{"All Posts(32)"}</li>
+          <li className="active">{"All Posts(32)"}</li>
+          <li>Posts</li>
           <li>Article</li>
           <li>Event</li>
           <li>Education</li>
