@@ -5,6 +5,9 @@ import Sarthak from "../assets/sarthak.png";
 import Sarah from "../assets/Sarah.png";
 import Ronal from "../assets/Ronal.png";
 import Joseph from "../assets/Joseph.png";
+import SignupModal from "../assets/signup-modal.svg";
+import Facebook from "../assets/facebook.png";
+import Google from "../assets/google.png";
 interface Image {
   [key: string]: string;
 }
@@ -17,5 +20,8 @@ const images: Image = {
   Sarah,
   Ronal,
   Joseph,
+  SignupModal,
+  Facebook,
+  Google,
 };
 export default images;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 interface SDotsWrapperProps {
-  active: boolean;
+  disabled: boolean;
 }
 const SDotWrapper = styled.div<SDotsWrapperProps>`
   width: 36px;
@@ -13,7 +13,8 @@ const SDotWrapper = styled.div<SDotsWrapperProps>`
   align-items: center;
   border-radius: 4px;
   position: relative;
-  background-color: ${(props) => (props.active ? "#bfc0c0" : "transparent")};
+  background-color: ${(props) =>
+    props.disabled ? "#bfc0c0" : "transparent"};
   &:hover {
     background: #bfc0c0;
   }
@@ -46,7 +47,7 @@ const ThreeDots = () => {
     <SDotWrapper
       id="extra-controls"
       className="clickable"
-      active={controls}
+      disabled={controls}
       onClick={() => setControls((prev) => !prev)}
     >
       <svg
