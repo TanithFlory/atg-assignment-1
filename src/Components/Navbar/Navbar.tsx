@@ -7,6 +7,10 @@ const Navbar = () => {
   const body = document.querySelector("body");
   useEffect(() => {
     modal && body?.classList.add("overflow-hidden");
+
+    return () => {
+      body?.classList.remove("overflow-hidden");
+    };
   }, [modal]);
 
   const disableModal = (
