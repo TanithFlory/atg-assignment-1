@@ -1,3 +1,4 @@
+import RecommendedGroups from "../../RecommendedGroups/RecommendedGroups";
 import SLocation from "./Location.styles";
 
 const Location = () => {
@@ -61,6 +62,7 @@ const Location = () => {
           experience.
         </span>
       </div>
+      <RecommendedGroups />
     </SLocation>
   );
 };

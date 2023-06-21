@@ -8,6 +8,10 @@ import Joseph from "../assets/Joseph.png";
 import SignupModal from "../assets/signup-modal.svg";
 import Facebook from "../assets/facebook.png";
 import Google from "../assets/google.png";
+import group1 from "../assets/group-pic1.png";
+import group2 from "../assets/group-pic2.png";
+import group3 from "../assets/group-pic3.png";
+import group4 from "../assets/group-pic4.png";
 interface Image {
   [key: string]: string;
 }
@@ -23,5 +27,9 @@ const images: Image = {
   SignupModal,
   Facebook,
   Google,
+  group1,
+  group2,
+  group3,
+  group4,
 };
 export default images;
