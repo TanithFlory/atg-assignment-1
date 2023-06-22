@@ -38,12 +38,16 @@ const SHeader = styled.header`
     }
   }
   @media screen and (max-width: 740px) {
+    & > div {
+      width: 101%;
+    }
     height: 236px;
     .desktop-bg {
       display: none;
     }
     .mobile-bg {
       display: block;
+      width: 101%;
     }
     & > div {
       div {

@@ -43,8 +43,12 @@ const Navbar = () => {
           </svg>
           <input placeholder="Search for your favorite groups in ATG" />
         </div>
-        <div className="navbar__create-acc" data-display="none">
-          <div onClick={() => setModal((prev) => !prev)}>
+        <div
+          onClick={() => setModal((prev) => !prev)}
+          className="navbar__create-acc clickable"
+          data-display="none"
+        >
+          <div>
             <span>
               Create account. <span>It's free!</span>
             </span>

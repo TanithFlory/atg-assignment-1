@@ -50,6 +50,7 @@ const SSignup = styled.div`
   .form-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     form {
       input,
       input:focus {
@@ -92,6 +93,7 @@ const SSignup = styled.div`
     }
   }
   .right-image {
+    flex-grow: 1;
     span {
       font-size: 11px;
       font-weight: 400;
@@ -129,6 +131,9 @@ const SSignup = styled.div`
       font-size: 14px;
       font-weight: 400;
     }
+  }
+  input[data-display="none"] {
+    display: none;
   }
 `;
 

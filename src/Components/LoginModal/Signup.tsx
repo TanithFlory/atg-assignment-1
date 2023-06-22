@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import images from "../../Constants/images";
 import SSignup from "./Signup.styles";
 
@@ -7,6 +7,7 @@ interface IProps {
 }
 
 const Signup = (props: IProps) => {
+  const [signin, setSignin] = useState(false);
   return (
     <SSignup onClick={(e) => props.disableModal(e)} className="backdrop">
       <div className="modal-wrapper">
@@ -18,11 +19,15 @@ const Signup = (props: IProps) => {
         </div>
         <div>
           <div>
-            <h1>Create Account</h1>
+            <h1>{signin ? "Welcome back!" : "Create Account"}</h1>
           </div>
-          <div className="sign-in">
+          <div className="sign-in" onClick={() => setSignin((prev) => !prev)}>
             <span>
-              Already have an account? <span>Sign In</span>
+              {signin ? "Already have an account?" : "Don't have an account?"}{" "}
+              <span className="clickable">
+                {" "}
+                {signin ? "Sign In" : "Sign Up"}
+              </span>
             </span>
           </div>
         </div>
@@ -30,24 +35,36 @@ const Signup = (props: IProps) => {
           <div className="form-wrapper">
             <form>
               <div>
-                <input placeholder="First Name" type="text" />
-                <input placeholder="Second Name" type="text" />
+                <input
+                  data-display={signin && "none"}
+                  placeholder="First Name"
+                  type="text"
+                />
+                <input
+                  data-display={signin && "none"}
+                  placeholder="Second Name"
+                  type="text"
+                />
               </div>
               <div>
                 <input placeholder="Email" type="email" />
                 <input placeholder="Password" type="password" />
-                <input placeholder="Confirm Password" type="password" />
+                <input
+                  data-display={signin && "none"}
+                  placeholder="Confirm Password"
+                  type="password"
+                />
               </div>
-              <button>Create Account</button>
+              <button>{signin ? "Sign In" : "Create Account"}</button>
             </form>
             <div className="signup-external">
               <div className="facebook">
                 <img src={images.Facebook} alt="facebook" />
-                <span>Sign up with Facebook</span>
+                <span>Sign {signin ? "in" : "up"} with Facebook</span>
               </div>
               <div className="google">
                 <img src={images.Google} alt="google" />
-                <span>Sign up with Google</span>
+                <span>Sign {signin ? "in" : "up"} with Google</span>
               </div>
             </div>
           </div>

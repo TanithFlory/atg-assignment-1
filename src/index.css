@@ -16,9 +16,15 @@ body {
   overflow-x: hidden;
   background-color: white;
 }
-
+.clickable {
+  cursor: pointer;
+}
 .overflow-hidden {
   overflow-y: hidden;
+}
+
+input {
+  font-family: IBM Plex Sans;
 }
 
 @media screen and (max-width: 740px) {

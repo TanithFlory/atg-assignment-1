@@ -19,7 +19,7 @@ const ArticleControls = () => {
         </ul>
       </div>
       <div>
-        <div data-display="none" className="write-post">
+        <div data-display="none" className="write-post clickable">
           <span>Write a Post</span>
           <svg
             width="10"
@@ -34,7 +34,7 @@ const ArticleControls = () => {
             />
           </svg>
         </div>
-        <div data-display="none" className="join-group">
+        <div data-display="none" className="join-group clickable">
           <svg
             width="22"
             height="13"

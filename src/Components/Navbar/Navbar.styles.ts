@@ -25,6 +25,11 @@ const SNavbar = styled.nav`
       outline: none;
       border: none;
       border-radius: 21px;
+      color: #5c5c5c;
+    }
+    input::placeholder {
+      font-size: 14px;
+      font-weight: 500;
     }
   }
   .navbar__create-acc {

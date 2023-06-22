@@ -60,9 +60,6 @@ export const SArticleCard = styled.div`
     }
   }
 
-  .clickable {
-    cursor: pointer;
-  }
   .visit-website,
   .apply-on {
     width: 100%;
@@ -90,7 +87,7 @@ export const SArticleCard = styled.div`
   }
   @media screen and (max-width: 740px) {
     max-width: 360px;
-    max-height: 328px;
+    max-height: 370px;
     grid-template-rows: 120px 1fr;
     align-items: center;
     & > img:first-child {
@@ -135,6 +132,12 @@ export const SArticleCard = styled.div`
       span:nth-child(2) {
         display: block;
         font-size: 0.8rem;
+      }
+    }
+    .location-details {
+      margin-bottom: 1rem;
+      span {
+        font-size: 0.75rem;
       }
     }
   }
