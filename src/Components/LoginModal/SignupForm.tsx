@@ -1,4 +1,3 @@
-import images from "../../Constants/images";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -137,7 +136,7 @@ const SignUpForm = (props: IProps) => {
           )}
           {error && <h5>Password doesn't match.</h5>}
         </div>
-        <div className="button">
+        <div className="button clickable">
           <button type="submit">
             {props.signin ? "Sign In" : "Create Account"}
           </button>
@@ -147,6 +146,11 @@ const SignUpForm = (props: IProps) => {
         </div>
       </form>
       <SignUpExternal signin={props.signin} />
+      <div className="terms-mobile">
+        <span>
+          By signing up, you agree to our Terms & conditions, Privacy policy
+        </span>
+      </div>
     </div>
   );
 };

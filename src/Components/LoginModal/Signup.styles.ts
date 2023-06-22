@@ -148,6 +148,9 @@ const SSignup = styled.div`
     right: 15px;
     top: 15px;
   }
+  .terms-mobile {
+    display: none;
+  }
   @media screen and (max-width: 672px) {
     h1 {
       font-size: 1.125rem;
@@ -174,7 +177,9 @@ const SSignup = styled.div`
     .modal-wrapper {
       max-height: max-content;
       height: auto;
+      position: absolute;
       bottom: 0;
+      border-radius: 8px 8px 0 0;
     }
     .button {
       display: flex;
@@ -197,6 +202,18 @@ const SSignup = styled.div`
     }
     .mobile-signin {
       display: block;
+    }
+    .terms-mobile {
+      display: block;
+      margin-top: 22px;
+      text-align: center;
+      span {
+        line-height: 1rem;
+        font-family: IBM Plex Sans;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: -0.008em;
+      }
     }
   }
 `;

@@ -52,9 +52,40 @@ const SArticleControls = styled.div`
     font-weight: 700;
     letter-spacing: 0.01em;
   }
+  .mobile-controls {
+    & > div {
+      display: none;
+    }
+  }
   @media screen and (max-width: 740px) {
+    width: 100%;
     .posts {
       display: block;
+    }
+
+    .mobile-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-inline: 1rem;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 8px 10px;
+        background-color: #f1f3f5;
+        border-radius: 4px;
+      }
+    }
+    & > div:first-child {
+      display: flex;
+      width: 100%;
+      ul {
+        width: 100%;
+        margin: 0 0 26px;
+      }
     }
   }
 `;

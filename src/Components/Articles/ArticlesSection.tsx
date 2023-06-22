@@ -14,11 +14,9 @@ const SArticleSection = styled.div`
     }
   }
   @media screen and (max-width: 956px) {
+    margin: 14px auto;
     .inner-wrapper {
       justify-content: center;
-    }
-    .article-navigation {
-      padding-inline: 10px;
     }
   }
 `;
