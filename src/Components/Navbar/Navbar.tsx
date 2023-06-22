@@ -2,9 +2,12 @@ import { useEffect, useState, MouseEvent } from "react";
 import Logo from "../../assets/SVG/Logo";
 import SNavbar from "./Navbar.styles";
 import Signup from "../LoginModal/Signup";
+import { LoginContext } from "../../Context/LoginContext";
+import { useContext } from "react";
 const Navbar = () => {
   const [modal, setModal] = useState<boolean>(false);
   const body = document.querySelector("body");
+  const loginStatus = useContext(LoginContext);
   useEffect(() => {
     modal && body?.classList.add("overflow-hidden");
 
@@ -17,13 +20,24 @@ const Navbar = () => {
     e: MouseEvent<HTMLDivElement, globalThis.MouseEvent> | undefined
   ) => {
     const target = e?.target as HTMLElement;
-    if (target.classList.contains("backdrop")) {
+    if (
+      target.classList.contains("backdrop") ||
+      target.classList.contains("close")
+    ) {
       setModal(false);
     }
   };
+  const disableModalClick = () => {
+    setModal(false);
+  };
   return (
     <>
-      {modal && <Signup disableModal={disableModal} />}
+      {modal && (
+        <Signup
+          disableModal={disableModal}
+          disableModalClick={disableModalClick}
+        />
+      )}
       <SNavbar>
         <div data-display="none">
           <Logo />
@@ -44,13 +58,19 @@ const Navbar = () => {
           <input placeholder="Search for your favorite groups in ATG" />
         </div>
         <div
-          onClick={() => setModal((prev) => !prev)}
+          onClick={() => {
+            !loginStatus.isLoggedIn && setModal((prev) => !prev);
+          }}
           className="navbar__create-acc clickable"
           data-display="none"
         >
-          <div>
+          <div className="user-img">
+            {loginStatus.picture && <img src={loginStatus.picture} alt="" />}
             <span>
-              Create account. <span>It's free!</span>
+              {!loginStatus.isLoggedIn
+                ? "Create account. "
+                : `${loginStatus.name.split("@")[0]}`}
+              {!loginStatus.isLoggedIn && <span>It's free.</span>}
             </span>
           </div>
           <svg
@@ -64,6 +84,26 @@ const Navbar = () => {
           </svg>
         </div>
         <div className="navbar-shapes">
+          {!loginStatus.isLoggedIn ? (
+            <div
+              className="clickable"
+              onClick={() => {
+                setModal((prev) => !prev);
+              }}
+            >
+              <span>Join us!</span>
+            </div>
+          ) : (
+            <div className="user-img">
+              {loginStatus.picture && <img src={loginStatus.picture} alt="" />}
+              <span>
+                {!loginStatus.isLoggedIn
+                  ? "Create account. "
+                  : `${loginStatus.name.split("@")[0]}`}
+                {!loginStatus.isLoggedIn && <span>It's free.</span>}
+              </span>
+            </div>
+          )}
           <div>
             <svg
               width="51"

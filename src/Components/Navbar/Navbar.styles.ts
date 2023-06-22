@@ -48,13 +48,39 @@ const SNavbar = styled.nav`
   .navbar-shapes {
     display: none;
   }
+  .user-img {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    & > img {
+      width: 36px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+    }
+  }
   @media screen and (max-width: 740px) {
     height: 24px;
     justify-content: flex-end;
 
     .navbar-shapes {
-      display: block;
-      margin-right: 12px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-inline: 12px;
+      & > div:first-child {
+        span {
+          color: blue;
+        }
+      }
+    }
+    .user-img {
+      gap: 5px;
+      span {
+        color: black;
+      }
+      img {
+        width: 20px;
+      }
     }
   }
 `;

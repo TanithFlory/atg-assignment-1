@@ -1,7 +1,9 @@
 import RecommendedGroups from "../../RecommendedGroups/RecommendedGroups";
 import SLocation from "./Location.styles";
-
+import { useContext } from "react";
+import { LoginContext } from "../../../Context/LoginContext";
 const Location = () => {
+  const { isLoggedIn } = useContext(LoginContext);
   return (
     <SLocation>
       <div className="location-input">
@@ -62,7 +64,7 @@ const Location = () => {
           experience.
         </span>
       </div>
-      <RecommendedGroups />
+      {isLoggedIn && <RecommendedGroups />}
     </SLocation>
   );
 };

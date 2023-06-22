@@ -5,7 +5,7 @@ const SSignup = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 101vw;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 9999;
@@ -18,6 +18,8 @@ const SSignup = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
+
     & > :nth-child(2) {
       padding: 0 2rem;
       display: flex;
@@ -90,6 +92,11 @@ const SSignup = styled.div`
         border: none;
         cursor: pointer;
       }
+      h5 {
+        margin: 5px 0;
+        color: red;
+        text-align: left;
+      }
     }
   }
   .right-image {
@@ -132,8 +139,65 @@ const SSignup = styled.div`
       font-weight: 400;
     }
   }
-  input[data-display="none"] {
+  .mobile-signin {
     display: none;
+  }
+
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  @media screen and (max-width: 672px) {
+    h1 {
+      font-size: 1.125rem;
+      margin: 22px 0;
+    }
+
+    .close {
+      right: 20px;
+      top: 22px;
+    }
+    .top-title {
+      display: none;
+    }
+    .sign-in {
+      display: none;
+    }
+    .right-image {
+      display: none;
+    }
+
+    input {
+      width: 100%;
+    }
+    .modal-wrapper {
+      max-height: max-content;
+      height: auto;
+      bottom: 0;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        text-decoration: underline;
+        font-size: 0.8rem;
+      }
+    }
+    .form-wrapper {
+      width: 100%;
+      max-width: 320px;
+      form {
+        button {
+          font-size: 0.8rem;
+          width: 150px;
+        }
+      }
+    }
+    .mobile-signin {
+      display: block;
+    }
   }
 `;
 
