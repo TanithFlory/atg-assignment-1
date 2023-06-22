@@ -8,6 +8,18 @@ const SArticleSection = styled.div`
   .inner-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    & > div:nth-child(2) {
+      margin-left: 15px;
+    }
+  }
+  @media screen and (max-width: 956px) {
+    .inner-wrapper {
+      justify-content: center;
+    }
+    .article-navigation {
+      padding-inline: 10px;
+    }
   }
 `;
 

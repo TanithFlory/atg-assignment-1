@@ -35,10 +35,7 @@ const ArticlePosts = () => {
                 <h2>{data.title}</h2>
                 <ThreeDots />
               </div>
-              <p>
-                I’ve worked in UX for the better part of a decade. From now on,
-                I plan to rei…
-              </p>
+              <p>I’ve worked in UX for the better part of a decade. F..</p>
               <UserDetails userImg={data.userImg} user={data.user} />
             </div>
           </SArticleCard>

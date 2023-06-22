@@ -25,10 +25,10 @@ const Navbar = () => {
     <>
       {modal && <Signup disableModal={disableModal} />}
       <SNavbar>
-        <div>
+        <div data-display="none">
           <Logo />
         </div>
-        <div className="navbar__search-box">
+        <div className="navbar__search-box" data-display="none">
           <svg
             width="17"
             height="17"
@@ -43,7 +43,7 @@ const Navbar = () => {
           </svg>
           <input placeholder="Search for your favorite groups in ATG" />
         </div>
-        <div className="navbar__create-acc">
+        <div className="navbar__create-acc" data-display="none">
           <div onClick={() => setModal((prev) => !prev)}>
             <span>
               Create account. <span>It's free!</span>
@@ -58,6 +58,27 @@ const Navbar = () => {
           >
             <path d="M0 0L5 5L10 0H0Z" fill="#2E2E2E" />
           </svg>
+        </div>
+        <div className="navbar-shapes">
+          <div>
+            <svg
+              width="51"
+              height="10"
+              viewBox="0 0 51 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect y="-0.00012207" width="10" height="10" fill="#868E96" />
+              <path
+                d="M26 9.99988C28.7614 9.99988 31 7.7613 31 4.99988C31 2.23845 28.7614 -0.00012207 26 -0.00012207C23.2386 -0.00012207 21 2.23845 21 4.99988C21 7.7613 23.2386 9.99988 26 9.99988Z"
+                fill="#868E96"
+              />
+              <path
+                d="M39 -0.00012207H51L45 9.99988L39 -0.00012207Z"
+                fill="#868E96"
+              />
+            </svg>
+          </div>
         </div>
       </SNavbar>
     </>

@@ -2,19 +2,24 @@ import SArticleControls from "./ArticleControls.styles";
 
 const ArticleControls = () => {
   return (
-    <SArticleControls>
+    <SArticleControls className="article-navigation">
       <div>
         <ul>
-          <li className="active">{"All Posts(32)"}</li>
-          <li>Posts</li>
-          <li>Article</li>
-          <li>Event</li>
-          <li>Education</li>
-          <li>Job</li>
+          <li data-display="none" className="active">
+            {"All Posts(32)"}
+          </li>
+          <li className="posts">{"Posts(368)"}</li>
+          {["Article", "Event", "Education", "Job"].map((data, index) => {
+            return (
+              <li data-display="none" key={index}>
+                {data}
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div>
-        <div className="write-post">
+        <div data-display="none" className="write-post">
           <span>Write a Post</span>
           <svg
             width="10"
@@ -29,7 +34,7 @@ const ArticleControls = () => {
             />
           </svg>
         </div>
-        <div className="join-group">
+        <div data-display="none" className="join-group">
           <svg
             width="22"
             height="13"

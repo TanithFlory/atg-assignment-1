@@ -34,7 +34,7 @@ const RecommendedGroups = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_1_1263)">
+          <g>
             <path
               opacity="0.3"
               d="M15.75 9V7.5H9L10.005 3.495L6.75 6.75V14.25H13.5L15.75 9Z"

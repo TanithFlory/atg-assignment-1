@@ -10,10 +10,13 @@ const UserDetails = (props: IProps) => {
     <SUserDetails className="user-details">
       <div>
         <img src={props.userImg} alt="user-img" />
-        <span>{props.user}</span>
+        <div className="name-views">
+          <span>{props.user}</span>
+          <span>1.4k views</span>
+        </div>
       </div>
       <div>
-        <div>
+        <div data-display="none">
           <svg
             width="18"
             height="12"

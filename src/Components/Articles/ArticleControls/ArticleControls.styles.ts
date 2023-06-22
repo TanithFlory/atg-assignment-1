@@ -47,6 +47,16 @@ const SArticleControls = styled.div`
       left: 0;
     }
   }
+  .posts {
+    display: none;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  @media screen and (max-width: 740px) {
+    .posts {
+      display: block;
+    }
+  }
 `;
 
 export default SArticleControls;

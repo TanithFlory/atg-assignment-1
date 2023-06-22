@@ -40,6 +40,18 @@ const SNavbar = styled.nav`
       }
     }
   }
+  .navbar-shapes {
+    display: none;
+  }
+  @media screen and (max-width: 740px) {
+    height: 24px;
+    justify-content: flex-end;
+
+    .navbar-shapes {
+      display: block;
+      margin-right: 12px;
+    }
+  }
 `;
 
 export default SNavbar;

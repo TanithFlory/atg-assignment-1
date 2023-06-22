@@ -7,6 +7,9 @@ const SHeader = styled.header`
     height: 100%;
     object-fit: cover;
   }
+  .mobile-bg {
+    display: none;
+  }
   & > div {
     z-index: 1;
     position: absolute;
@@ -19,10 +22,10 @@ const SHeader = styled.header`
       rgba(0, 0, 0, 0.45) 0%,
       rgba(0, 0, 0, 0.6) 100%
     );
-    display: flex;
-    align-items: end;
     div {
-      margin: 0 0 80px 200px;
+      position: absolute;
+      bottom: 80px;
+      left: 120px;
       h1 {
         margin: 0;
         font-size: 2.25rem;
@@ -30,6 +33,28 @@ const SHeader = styled.header`
       }
       span {
         font-weight: 400;
+        font-size: 1.15rem;
+      }
+    }
+  }
+  @media screen and (max-width: 740px) {
+    height: 236px;
+    .desktop-bg {
+      display: none;
+    }
+    .mobile-bg {
+      display: block;
+    }
+    & > div {
+      div {
+        left: 10px;
+        bottom: 24px;
+        h1 {
+          font-size: 1rem;
+        }
+        span {
+          font-size: 0.75rem;
+        }
       }
     }
   }

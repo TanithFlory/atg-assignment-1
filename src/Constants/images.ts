@@ -1,6 +1,8 @@
 import Article1 from "../assets/article-2.png";
 import Article2 from "../assets/article-1.png";
 import Article3 from "../assets/article-3.png";
+import HomepageBG from "../assets/homepage-bg.png";
+import HomepageBG2 from "../assets/homepage-bg-2.png";
 import Sarthak from "../assets/sarthak.png";
 import Sarah from "../assets/Sarah.png";
 import Ronal from "../assets/Ronal.png";
@@ -31,5 +33,7 @@ const images: Image = {
   group2,
   group3,
   group4,
+  HomepageBG,
+  HomepageBG2,
 };
 export default images;
